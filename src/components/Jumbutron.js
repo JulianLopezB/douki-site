@@ -8,7 +8,7 @@ const Jumbutron = ({ children }) => {
         <p className='text-gray text-left text-1xl  mb-1'>
           At Fashionist.Ai, we believe that fashion is an art. It's an audacious, ambitious and extremely personal project.</p>
         <p className='text-gray text-left text-1xl  mb-1'>
-          Our new AI-driven experience that makes finding your favorite outfit easier than ever before.
+          Our new AI-driven experience makes finding your favorite outfit easier than ever before.
         </p>
         <p className='text-gray text-left text-1xl  mb-3'>
           Images are sourced from Mango, Zara and H&M lastest collections. </p>
