@@ -10,7 +10,7 @@ const Jumbutron = ({ children }) => {
         <p className='text-gray text-left text-1xl  mb-1'>Our goal is to allow anyone to be stylish and fashionable by creating an easy shopping experience for them.</p>
         <p className='text-gray text-left text-1xl  mb-3'>
         Images are sourced from Mango, Zara and H&M lastest collections. </p>
-        <p className='text-gray text-left text-1xl  mb-3'>Devloped by <a class="footer" href="https://twitter.com/JulianLBaasch" target="_blank">Julian Lopez Baasch</a></p>
+        <p className='text-gray text-left text-1xl  mb-3'>Devloped by <a class="footer" href="https://twitter.com/JulianLBaasch">Julian Lopez Baasch</a></p>
         {children}
       </div>
     </div>
