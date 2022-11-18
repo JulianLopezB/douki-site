@@ -5,13 +5,15 @@ const Jumbutron = ({ children }) => {
     <div className="bg-amber-50 flex items-center py-10">
       <div className='max-w-md mx-auto w-full'>
         <h1 className='text-gray text-center text-3xl font-bold mb-5'>Fashionist.ai</h1>
+        {/* <p className='text-gray text-left text-1xl  mb-1'>
+          We believe that fashion is an art. It's an audacious, ambitious and extremely personal project
+        </p> */}
         <p className='text-gray text-left text-1xl  mb-1'>
-          At Fashionist.Ai, we believe that fashion is an art. It's an audacious, ambitious and extremely personal project.</p>
-        <p className='text-gray text-left text-1xl  mb-1'>
-          Our new AI-driven experience makes finding your favorite outfit easier than ever before.
+          Do you love fashion? Discover amazing outfits with Fashionist.ai, a new AI-driven experience to creatively shop for clothes.
         </p>
-        <p className='text-gray text-left text-1xl  mb-3'>
-          Images are sourced from Mango, Zara and H&M lastest collections. </p>
+        {/* <p className='text-gray text-left text-1xl  mb-3'>
+          Images are sourced from Mango, Zara and H&M lastest collections. 
+        </p> */}
         <p className='text-gray text-left text-1xl  mb-3'>Devloped by <a class="footer" href="https://twitter.com/JulianLBaasch">Julian Lopez Baasch</a></p>
         {children}
       </div>
