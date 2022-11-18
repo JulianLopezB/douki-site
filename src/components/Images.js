@@ -4,7 +4,7 @@ import Image from "./Image";
 import Skeleton from "./Skeleton";
 
 const Images = () => {
-  const { response, isLoading, searchImage } = useContext(ImageContext);
+  const { response, isLoading } = useContext(ImageContext);
 
   return (
     <>
