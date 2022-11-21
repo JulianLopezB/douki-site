@@ -6,12 +6,10 @@ const Image = ({ data }) => {
     // </a>
     
       <div class="relative mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
-        <a href={data.img_urls} target="_blank" rel="noreferrer">
-          <img class="w-full rounded-md rounded-lg shadow-md object-cover" 
-                src={data.img_urls}
-                alt={data.name}
-          />
-        </a>
+        <img class="w-full rounded-md rounded-lg shadow-md object-cover" 
+              src={data.img_urls}
+              alt={data.name}
+        />
         <div class="test__body absolute inset-0 p-8 text-white flex flex-col">
           <div class="relative">
             {/* <a class="test__link absolute inset-0" target="_blank" href="/"></a> */}
