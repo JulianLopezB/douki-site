@@ -39,7 +39,7 @@ export default class Image extends React.Component {
             />
             <div class="test__body absolute inset-0 p-8 text-white flex flex-col">
               <div class="relative">
-                <a class="test__link absolute inset-0" target="_blank" href="/"></a>
+                {/* <a class="test__link absolute inset-0" target="_blank" href="/"></a> */}
                 <h1 class="test__title text-1xl font-bold mb-1">{this.props.data.name}</h1>
                 <p class="test__author font-sm font-light">{this.props.data.brand}</p>
               </div>
