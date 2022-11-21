@@ -35,6 +35,7 @@ export default class Image extends React.Component {
             <img class="w-full rounded-md rounded-lg shadow-md object-cover" 
                  src={this.props.data.img_urls}
                  onClick={this.handleShowDialog}
+                 alt={this.props.data.name}
             />
             <div class="test__body absolute inset-0 p-8 text-white flex flex-col">
               <div class="relative">
