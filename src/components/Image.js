@@ -1,3 +1,5 @@
+import {} from '../styles.css'
+
 const Image = ({ data }) => {
   return (
     // <a href={data.img_urls} target="_blank" rel="noreferrer">
@@ -11,14 +13,22 @@ const Image = ({ data }) => {
               alt={data.name}
         />
         <div class="test__body absolute inset-0 p-8 text-white flex flex-col">
+          {/* <div class="relative">
+            <h1 class="test__title text-1xl font-bold mb-1">{data.name}</h1>
+            <p class="test__author font-sm font-light">{data.brand.toUpperCase()}</p>
+            <p class="test__author font-sm font-light">29 €</p>
+            <a href="https://jamemme.com/products/angel-dress" target="_blank">See in shop</a>
+          </div> */}
           <div class="relative">
-            {/* <a class="test__link absolute inset-0" target="_blank" href="/"></a> */}
             <h1 class="test__title text-1xl font-bold mb-1">{data.name}</h1>
             <p class="test__author font-sm font-light">{data.brand.toUpperCase()}</p>
             <p class="test__author font-sm font-light">29 €</p>
           </div>
           <div class="mt-auto">
-            <span class="test__tag bg-white bg-opacity-60 py-1 px-4 rounded-md text-black">See in shop</span>
+            {/* <a class="shop-button" href="https://jamemme.com/products/angel-dress" target="_blank">See in shop</a> */}
+            <a class="test__tag bg-white bg-opacity-60 py-1 px-4 rounded-md text-black" href="https://jamemme.com/products/angel-dress">
+              See in shop
+            </a>
           </div>
         </div>
       </div>

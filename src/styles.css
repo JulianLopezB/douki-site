@@ -9,3 +9,27 @@
     color: rgb(104, 101, 101);
   
   }
+
+.shop-button {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 6px;
+    margin-top: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.dialog {
+    font-family: Helvetica, system-ui, sans-serif;
+    border: none !important;
+    border-radius: 5px;
+    box-shadow: 0 0 #0000, 0 0 #00000000, 0 25px 50px -12px rgb(0 0 0 / 25%);
+    padding: 1.6rem;
+    width: calc(100% - 3.2em);
+    max-width: 320px;
+  }
+  
