@@ -9,7 +9,7 @@ export const ImageContext = createContext();
 
 function App() {
   const [searchImage, setSearchImage] = useState('');
-  const { response, isLoading, error, fetchData } = useAxios(`search?query=girl walking on the streets of Paris`);
+  const { response, isLoading, error, fetchData } = useAxios(`search?query=Wear like a character of a movie by Wes Anderson`);
 
   const value = {
     response,
