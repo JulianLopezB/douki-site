@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { ImageContext } from "../App"
 import Image from "./Image";
-import Skeleton from "./Skeleton";
+// import Skeleton from "./Skeleton";
 import Spin from "./Spin";
 
 const Images = () => {
