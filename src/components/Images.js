@@ -6,21 +6,25 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-// import CardActions from '@mui/material/CardActions';
+import CardActions from '@mui/material/CardActions';
+import CardActionArea from '@material-ui/core/CardActionArea';
 // import Collapse from '@mui/material/Collapse';
 // import Avatar from '@mui/material/Avatar';
 import IconButton  from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 // import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ButtonBase from '@material-ui/core/ButtonBase';
 // import ShareIcon from '@mui/icons-material/Share';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import { makeStyles } from '@material-ui/core/styles';
-
+import StorefrontIcon from '@mui/icons-material/Storefront';
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
 // }
+
+
 
 function toTitleCase(str) {
   return str.replace(
@@ -73,6 +77,12 @@ function getImageSrc(brand) {
 
 
 function Images() {
+  const classes = {
+    cardAction: {
+      display: 'block',
+      textAlign: 'initial'
+    }
+  }
 
   const { response  } = useContext(ImageContext);
   const uniqueArray = response.filter((value, index) => {
@@ -91,19 +101,13 @@ function Images() {
   return (
     
   
-    <div className="items-center px-6">
+    <div className="items-center px-0">
       <div className="md:shrink-0 items-center">
         <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4">
           {uniqueArray.map((data, key) => (
-            // <div class="relative  mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
-            //   <img class="w-full rounded-md rounded-lg shadow-md object-cover" 
-            //     src={data.img_urls}
-            //     alt={data.name}
-            //   />
-            // </div>
+
             <div class="relative  mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
             <Card 
-              // sx={{ maxWidth: 480}}
             >
             <CardHeader
               avatar={
@@ -114,60 +118,26 @@ function Images() {
                   width="40" 
                   frameborder="0" 
                   scrolling="no"/>
-                // <Avatar 
-                //   // sx={{ bgcolor: red[500]}} 
-                //   src={getImageSrc(data.brand.toUpperCase())}
-                //   className={classes.small}
-                //   // aria-label="recipe"
-                //   >
-                //   {/* {data.brand.toUpperCase()} */}
-                // </Avatar>
               }
               action={
-                // <IconButton aria-label="settings">
-                //   <MoreVertIcon />
-                // </IconButton>
                 <IconButton aria-label="add to favorites">
-                  <FavoriteIcon />
+                  <FavoriteIcon /> 
                 </IconButton>
               }
               title={toTitleCase(data.name)}
-              subheader="29 €"
+              subheader={data.price}
             />
-            <CardMedia
-              component="img"
-              height="194"
-              image={data.img_urls}
-              alt={key}
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                {data.description}
-              </Typography>
-            </CardContent>
-            {/* <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-              <ExpandMore
-                expand={expanded}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon />
-              </ExpandMore>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph>
-                  {data.description}
-                </Typography>
-              </CardContent>
-            </Collapse> */}
+
+              <CardActionArea 
+              href={data.shop_link} target="_blank">
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image={data.img_urls}
+                  alt={key}
+                />
+            </CardActionArea>
+
           </Card>
           </div>
       ))}
