@@ -84,7 +84,7 @@ function Images() {
   return (
     
   
-    <div className="items-center px-8">
+    <div className="items-center px-80">
       <div className="md:shrink-0 items-center">
         <div class="columns-2 md:columns-3 lg:columns-4">
           {response.map((data, key) => (
@@ -94,7 +94,10 @@ function Images() {
             //     alt={data.name}
             //   />
             // </div>
-            <Card sx={{ maxWidth: 345 }}>
+            <div class="relative  mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
+            <Card 
+              // sx={{ maxWidth: 480}}
+            >
             <CardHeader
               avatar={
                 <img src={getImageSrc(data.brand.toUpperCase())}  alt={data.brand} height="60" width="40" frameborder="0" scrolling="no"/>
@@ -153,6 +156,7 @@ function Images() {
               </CardContent>
             </Collapse> */}
           </Card>
+          </div>
       ))}
         </div>
       </div>
