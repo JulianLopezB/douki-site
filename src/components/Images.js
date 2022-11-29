@@ -5,25 +5,24 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@material-ui/core/CardActionArea';
 // import Collapse from '@mui/material/Collapse';
 // import Avatar from '@mui/material/Avatar';
 import IconButton  from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 // import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ButtonBase from '@material-ui/core/ButtonBase';
+// import ButtonBase from '@material-ui/core/ButtonBase';
 // import ShareIcon from '@mui/icons-material/Share';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import { makeStyles } from '@material-ui/core/styles';
-import StorefrontIcon from '@mui/icons-material/Storefront';
+// import StorefrontIcon from '@mui/icons-material/Storefront';
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
 // }
-
 
 
 function toTitleCase(str) {
@@ -77,12 +76,6 @@ function getImageSrc(brand) {
 
 
 function Images() {
-  const classes = {
-    cardAction: {
-      display: 'block',
-      textAlign: 'initial'
-    }
-  }
 
   const { response  } = useContext(ImageContext);
   const uniqueArray = response.filter((value, index) => {
