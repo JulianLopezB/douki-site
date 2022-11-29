@@ -91,7 +91,7 @@ function Images() {
   return (
     
   
-    <div className="items-center px-8">
+    <div className="items-center px-6">
       <div className="md:shrink-0 items-center">
         <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4">
           {uniqueArray.map((data, key) => (
@@ -107,7 +107,13 @@ function Images() {
             >
             <CardHeader
               avatar={
-                <img src={getImageSrc(data.brand.toUpperCase())}  alt={data.brand} height="60" width="40" frameborder="0" scrolling="no"/>
+                <img 
+                  src={getImageSrc(data.brand.toUpperCase())}  
+                  alt={data.brand}
+                  // height="60"
+                  width="40" 
+                  frameborder="0" 
+                  scrolling="no"/>
                 // <Avatar 
                 //   // sx={{ bgcolor: red[500]}} 
                 //   src={getImageSrc(data.brand.toUpperCase())}
