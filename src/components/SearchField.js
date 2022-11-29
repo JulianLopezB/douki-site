@@ -29,7 +29,7 @@ const SearchField = () => {
       <input
         className="bg-gray-50 border border-gray-300 text-sm w-full indent-2 p-2.5 outline-none focus:border-blue-500 focus:ring-2 rounded-tl rounded-bl"
         type="search"
-        placeholder={placeHolder || 'Wear like a character of a movie by Wes Anderson'}
+        placeholder={placeHolder || "eg. Wes Anderson film"}
         value={searchValue}
         onChange={handleInputChange}
         onKeyDown={handleEnterSearch}
@@ -39,6 +39,9 @@ const SearchField = () => {
         disabled={!searchValue}
         className="bg-blue-600 px-6 py-2.5 text-white rounded-tr rounded-br focus:ring-2 focus:ring-blue-300 disabled:bg-gray-400"
       >Search</button>
+      <div className="flex">
+      </div>
+      
     </div>
   )
 }
