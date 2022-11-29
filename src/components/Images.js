@@ -1,26 +1,26 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { ImageContext } from "../App"
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+// import CardActions from '@mui/material/CardActions';
+// import Collapse from '@mui/material/Collapse';
+// import Avatar from '@mui/material/Avatar';
+import IconButton  from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
+// import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { makeStyles } from '@material-ui/core/styles';
+// import ShareIcon from '@mui/icons-material/Share';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import MoreVertIcon from '@mui/icons-material/MoreVert';
+// import { makeStyles } from '@material-ui/core/styles';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
+// interface ExpandMoreProps extends IconButtonProps {
+//   expand: boolean;
+// }
 
 function toTitleCase(str) {
   return str.replace(
@@ -43,43 +43,43 @@ function getImageSrc(brand) {
   return src
 }
 
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+// const ExpandMore = styled((props: ExpandMoreProps) => {
+//   const { expand, ...other } = props;
+//   return <IconButton {...other} />;
+// })(({ theme, expand }) => ({
+//   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+//   marginLeft: 'auto',
+//   transition: theme.transitions.create('transform', {
+//     duration: theme.transitions.duration.shortest,
+//   }),
+// }));
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-  small: {
-    width: theme.spacing(3),
-    height: theme.spacing(3),
-  },
-  large: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: 'flex',
+//     '& > *': {
+//       margin: theme.spacing(1),
+//     },
+//   },
+//   small: {
+//     width: theme.spacing(3),
+//     height: theme.spacing(3),
+//   },
+//   large: {
+//     width: theme.spacing(7),
+//     height: theme.spacing(7),
+//   },
+// }));
 
 
 function Images() {
 
-  const { response, isLoading } = useContext(ImageContext);
-  const [expanded, setExpanded] = React.useState(false);
-  const classes = useStyles();
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const { response  } = useContext(ImageContext);
+  // const [expanded, setExpanded] = React.useState(false);
+  // const classes = useStyles();
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
     
@@ -97,7 +97,7 @@ function Images() {
             <Card sx={{ maxWidth: 345 }}>
             <CardHeader
               avatar={
-                <img src={getImageSrc(data.brand.toUpperCase())}   height="60" width="40" frameborder="0" scrolling="no"/>
+                <img src={getImageSrc(data.brand.toUpperCase())}  alt={data.brand} height="60" width="40" frameborder="0" scrolling="no"/>
                 // <Avatar 
                 //   // sx={{ bgcolor: red[500]}} 
                 //   src={getImageSrc(data.brand.toUpperCase())}
