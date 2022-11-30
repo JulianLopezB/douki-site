@@ -9,8 +9,8 @@ export const ImageContext = createContext();
 
 function App() {
   const [searchImage, setSearchImage] = useState('');
-  const { response, isLoading, error, fetchData } = useAxios(``);
-  // const { response, isLoading, error, fetchData } = useAxios(`search?query=Wes Anderson film`);
+  // const { response, isLoading, error, fetchData } = useAxios(``);
+  const { response, isLoading, error, fetchData } = useAxios(`search?query=Wes Anderson`);
 
   const value = {
     response,
