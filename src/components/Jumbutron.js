@@ -10,7 +10,7 @@ const Jumbutron = ({ children }) => {
         </span>
         {/* <h1 className='text-gray text-center text-3xl font-bold mb-5'>Fashionist.ai</h1> */}
         <p className='text-gray text-left text-2xl  mb-5'>
-          Do you love fashion? Discover amazing outfits with Fashionist.ai, 
+          Do you love fashion? Discover amazing outfits with Dō ki, 
           a new AI-driven experience to creatively shop for clothes.
         </p>
         <p className='text-gray text-left text-1xl  mb-8'>Devloped by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba">Julian Lopez Baasch</a></p>
