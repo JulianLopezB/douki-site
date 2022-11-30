@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Project Preview](./src/demo-video.mov)
+![Project Preview](./src/demo-video.gif)
 
 ## Available Scripts
 
