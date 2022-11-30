@@ -6,7 +6,7 @@ const Jumbutron = ({ children }) => {
     <div className="flex md:flex items-center py-10 px-6">
       <div className='max-w-md md:max-w-md mx-auto w-full'>
         <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-5">
-          FASHIONIST.ai
+        Dō ki
         </span>
         {/* <h1 className='text-gray text-center text-3xl font-bold mb-5'>Fashionist.ai</h1> */}
         <p className='text-gray text-left text-2xl  mb-5'>
