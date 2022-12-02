@@ -6,7 +6,7 @@ const useAxios = (param) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   
-  var emptyArray = new Array();
+  // var emptyArray = new Array();
 
   // axios.defaults.baseURL = 'https://clipfashion-gr7fp45wya-ue.a.run.app/api/v1/';
   axios.defaults.baseURL = 'http://127.0.0.1:5000/api/v1/';
