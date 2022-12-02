@@ -48,6 +48,7 @@ function Images() {
   
     <div className="items-center px-0">
       <div className="md:shrink-0 items-center">
+      {(typeof response !== 'undefined' && response.length > 0) ? (
         <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4">
           {uniqueArray.map((data, key) => (
             <div class="relative  mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
@@ -85,7 +86,9 @@ function Images() {
           </Card>
           </div>
       ))}
-        </div>
+        </div>) : (
+          <></>
+        )}
       </div>
     </div>
     
