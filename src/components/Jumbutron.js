@@ -31,7 +31,7 @@ const Jumbutron = ({ children }) => {
         {/* <p className='text-gray text-left text-2xl  mb-5'>
           Images are sourced from Zara, Mango, H&M and Urban Outfitters latest collections</p> */}
         <p className='text-gray text-left text-2xl  mb-8'>
-          Devloped by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba">Julian Lopez Baasch</a>
+          Developed by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba">Julian Lopez Baasch</a>
           </p>
         {/* <h1 class="text-gray text-left text-3xl font-bold mb-3 py-0">
             Suggestions

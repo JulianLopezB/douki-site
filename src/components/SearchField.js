@@ -19,7 +19,7 @@ const SearchField = () => {
     if(e.key === 'Enter') {
       fetchData(`search?query=${searchValue}`)
       setPlaceHolder(searchValue);
-      setSearchValue("");
+      // setSearchValue("");
       setSearchImage(searchValue);
     }
   }
