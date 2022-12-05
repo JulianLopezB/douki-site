@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { ImageContext } from "../App"
 import Image from './Image';
 import * as React from 'react';
