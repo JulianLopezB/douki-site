@@ -2,9 +2,7 @@ import { useContext, useState } from "react"
 import { ImageContext } from "../App";
 
 const SearchField = () => {
-  const [searchValue, setSearchValue] = useState("");
-  const [placeHolder, setPlaceHolder] = useState("");
-  const { fetchData, setSearchImage } = useContext(ImageContext);
+  const { fetchData, setSearchImage, searchValue, setSearchValue, placeHolder, setPlaceHolder } = useContext(ImageContext);
 
   const handleInputChange = (e) => {
     setSearchValue(e.target.value);
@@ -38,7 +36,9 @@ const SearchField = () => {
         onClick={handleButtonSearch}
         disabled={!searchValue}
         className="bg-blue-600 px-6 py-2.5 text-white rounded-tr rounded-br focus:ring-2 focus:ring-blue-300 disabled:bg-gray-400"
-      >Search</button>
+      >
+        Search
+      </button>
       <div className="flex">
       </div>
       

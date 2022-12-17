@@ -9,6 +9,8 @@ export const ImageContext = createContext();
 
 function App() {
   const [searchImage, setSearchImage] = useState('');
+  const [searchValue, setSearchValue] = useState("");
+  const [placeHolder, setPlaceHolder] = useState("");
   const { response, isLoading, error, fetchData } = useAxios(`null`);
   console.log('response', response);
   // const { response, isLoading, error, fetchData } = useAxios(`search?query=Wes Anderson`);
@@ -19,7 +21,11 @@ function App() {
     error,
     fetchData,
     searchImage,
-    setSearchImage
+    setSearchImage,
+    searchValue,
+    setSearchValue,
+    placeHolder,
+    setPlaceHolder
   }
 
   return (
