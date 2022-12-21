@@ -9,7 +9,7 @@ const Jumbutron = ({ children }) => {
     <div className="flex md:flex items-center py-10 px-6">
       <div className='max-w-md md:max-w-md mx-auto w-full'>
         <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
-        <a href='https://stellar-crumble-5f7f85.netlify.app/'>Dokusō</a>
+        <a href='https:/dokuso.app/'>Dokusō</a>
         </span>
         {(typeof response !== 'undefined' && response.length > 0) ? (
           <div class="py-2"></div>
