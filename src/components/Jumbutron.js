@@ -1,20 +1,39 @@
 import React from 'react'
 import { useContext } from "react"
+import Navbar from "./Navbar";
 import { ImageContext } from "../App"
 
 const Jumbutron = ({ children }) => {
   const { response  } = useContext(ImageContext);
   return (
     // <div className="bg-amber-50 flex items-center py-10">
-    <div className="flex md:flex items-center py-10 px-6">
-      <div className='max-w-md md:max-w-md mx-auto w-full'>
-        <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
-        <a href='https://dokuso.app/'>Dokusō</a>
-        </span>
+
+      <>
         {(typeof response !== 'undefined' && response.length > 0) ? (
-          <div class="py-2"></div>
+          // <div class="py-2"></div>
+          <div 
+            style={{
+                    'top': "0px",
+                    'position': "sticky",
+                    'width': "100%",
+                    'lg-height': "96px",
+                    // 'sm-height': "150px",
+                    'z-index':'10'
+                    }}
+                    className="bg-gray-50"
+                    
+                    >
+            <Navbar>
+              { children }
+            </Navbar>
+          </div>
         ) : (
-        <>
+          <>
+        <div className="flex md:flex items-center py-10 px-6">
+        <div className='max-w-md md:max-w-md mx-auto w-full'>
+          <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
+          <a href='https://dokuso.app/'>Dokusō</a>
+          </span>
         <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
           About
           </h1>
@@ -40,10 +59,13 @@ const Jumbutron = ({ children }) => {
             "Wes Anderson movie", "Merlina", "Men's shirt with floral patterns",
             "What to wear at a beach wedding"
           </p> */}
-        </>)}
-        {children}
-      </div>
-    </div>
+
+          {children}
+          </div>
+          </div>
+          </>)}
+          
+     </>
   )
 }
 
