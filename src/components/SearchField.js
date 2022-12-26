@@ -64,7 +64,7 @@ const SearchField = () => {
           // placeholder="Search..."
           type="search"
           // placeholder={placeHolder || "eg. Wes Anderson"}
-          placeholder={placeHolder || "Unleash your creativity and find your perfect outfit"}
+          placeholder={placeHolder || "Find your perfect outfit"}
           value={searchValue}
           onChange={handleInputChange}
           onKeyDown={handleEnterSearch}
