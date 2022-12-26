@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {} from '../styles.css'
+import {} from '../styles.scss'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';

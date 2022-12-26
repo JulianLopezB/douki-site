@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { ImageContext } from "../App"
-import {} from '../styles.css'
+import {} from '../styles.scss'
 
 const SearchField = () => {
   const { fetchData, setSearchImage, searchValue, setSearchValue, placeHolder, setPlaceHolder } = useContext(ImageContext);
@@ -45,8 +45,8 @@ const SearchField = () => {
       
     // </div>
 
-    <div className="flexbox">
-      <div class="search">
+    <div className="flex">
+      {/* <div class="search">
         <div>
         <input
         className="bg-gray-50 placeholder:italic border border-gray-300 text-sm w-full indent-2 p-2.5 outline-none focus:border-blue-500 focus:ring-2 rounded-tl rounded-bl"
@@ -57,9 +57,23 @@ const SearchField = () => {
         onKeyDown={handleEnterSearch}
         />
         </div>
+      </div> */}
+      <div class="search-bar">
+        <input 
+          // type="text" 
+          // placeholder="Search..."
+          type="search"
+          // placeholder={placeHolder || "eg. Wes Anderson"}
+          placeholder={placeHolder || "Unleash your creativity and find your perfect outfit"}
+          value={searchValue}
+          onChange={handleInputChange}
+          onKeyDown={handleEnterSearch}
+        />
       </div>
-      
     </div>
+
+
+    
   )
 }
 
