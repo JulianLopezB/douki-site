@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ImageContext } from "../App"
+import { ImageContext } from "../container/Home"
 import Image from './Image';
 import * as React from 'react';
 
@@ -38,7 +38,7 @@ function Images() {
         <div className="flex md:flex items-center py-3 px-6">
           <div className='max-w-md md:max-w-md mx-auto w-full'>
           <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
-          Suggestions
+          Unleash your creativity
           </h1>
           <div class="flex space-x-2 justify-center">
             <div>

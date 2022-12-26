@@ -1,41 +1,41 @@
-import { createContext, useState } from "react";
-import Images from "./components/Images";
-import Jumbutron from "./components/Jumbutron";
-import SearchField from "./components/SearchField";
-import useAxios from "./hooks/useAxios";
+// import Home from "./container/Home";
 
-// Create Context
-export const ImageContext = createContext();
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Home />,
+//   },
+// ]);
 
-function App() {
-  const [searchImage, setSearchImage] = useState('');
-  const [searchValue, setSearchValue] = useState("");
-  const [placeHolder, setPlaceHolder] = useState("");
-  const { response, isLoading, error, fetchData } = useAxios(`null`);
-  console.log('response', response);
-  // const { response, isLoading, error, fetchData } = useAxios(`search?query=Wes Anderson`);
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <RouterProvider router={router} />
+//   </React.StrictMode>
+// );
 
-  const value = {
-    response,
-    isLoading,
-    error,
-    fetchData,
-    searchImage,
-    setSearchImage,
-    searchValue,
-    setSearchValue,
-    placeHolder,
-    setPlaceHolder
-  }
+import React, { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
+// import { Login } from './components';
+import Home from './container/Home';
+import Manifesto from './container/Manifesto';
+
+const App = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+
+    if (!User) navigate('/login');
+  }, []);
 
   return (
-    <ImageContext.Provider value={value}>
-      <Jumbutron>
-        <SearchField />
-      </Jumbutron>
-      <Images />
-    </ImageContext.Provider>
+    <Routes>
+      {/* <Route path="login" element={<Login />} /> */}
+      <Route path="/*" element={<Home />} />
+      <Route path="manifesto" element={<Manifesto />} />
+    </Routes>
   );
-}
+};
 
 export default App;

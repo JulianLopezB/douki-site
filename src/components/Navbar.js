@@ -6,11 +6,11 @@ const Navbar = ({ children }) => {
     return (
       <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-100">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="#top" class="flex items-center">
+        <a href="/home" class="flex items-center">
             {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
             <span class="box-decoration-clone text-white text-2xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-2">
-              <a href='https://dokuso.app/'>Dokusō</a>
+              <a href='/home'>Dokusō</a>
             </span>
         </a>
         <div class="mt-2 lg:mr-10 md:mr-10 sm:mr-5 w-96 hidden w-full l md:block md:w-auto"> { children } </div>
@@ -21,10 +21,10 @@ const Navbar = ({ children }) => {
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-100 dark:border-gray-700">
             <li>
-              <a href="#top" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+              <a href="/home" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#top" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              <a href="/manifesto" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Manifesto</a>
             </li>
             <li>
               <a href="#top" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Partners</a>

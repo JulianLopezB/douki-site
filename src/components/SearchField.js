@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ImageContext } from "../App"
+import { ImageContext } from "../container/Home"
 import {} from '../styles.scss'
 
 const SearchField = () => {
@@ -62,6 +62,7 @@ const SearchField = () => {
         <input 
           // type="text" 
           // placeholder="Search..."
+          className="bg-gray-50 placeholder:italic border border-gray-300 text-sm w-full indent-2 p-2.5 outline-none focus:border-blue-500 focus:ring-2 lg:focus:ring-0 rounded-tl rounded-bl"
           type="search"
           // placeholder={placeHolder || "eg. Wes Anderson"}
           placeholder={placeHolder || "Find your perfect outfit"}

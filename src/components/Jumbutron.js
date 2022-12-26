@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from "react"
 import Navbar from "./Navbar";
-import { ImageContext } from "../App"
+import { ImageContext } from "../container/Home"
 
 const Jumbutron = ({ children }) => {
   const { response  } = useContext(ImageContext);
@@ -34,10 +34,10 @@ const Jumbutron = ({ children }) => {
           <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
           <a href='https://dokuso.app/'>Dokusō</a>
           </span>
-        <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
+        {/* <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
           About
-          </h1>
-        <p className='text-gray text-left text-1xl  mb-5'>
+          </h1> */}
+        <p className='text-gray text-left text-1xl  mb-5 py-2'>
           Do you love fashion? Discover amazing outfits with Dokusō, 
           a new AI-driven experience to creatively shop for clothes.
         </p>
@@ -59,7 +59,7 @@ const Jumbutron = ({ children }) => {
             "Wes Anderson movie", "Merlina", "Men's shirt with floral patterns",
             "What to wear at a beach wedding"
           </p> */}
-
+      
           {children}
           </div>
           </div>
