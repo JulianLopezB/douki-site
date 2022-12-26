@@ -6,7 +6,7 @@ const Navbar = ({ children }) => {
     return (
       <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-100">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a class="flex items-center">
+        <a href="#top" class="flex items-center">
             {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
             <span class="box-decoration-clone text-white text-2xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-2">
