@@ -1,23 +1,23 @@
 import React from 'react'
 // import { useContext } from "react"
-import Navbar from "../components/Navbar";
+import NavigationBar from "../components/NavigationBar";
 
 const Manifesto = () => {
 
     return (
-<div 
-style={{
-'top': "0px",
-'position': "sticky",
-'width': "100%",
-'lg-height': "96px",
-// 'sm-height': "150px",
-'z-index':'10'
-}}
-className="bg-gray-50"
+    <div 
+    style={{
+    'top': "0px",
+    'position': "sticky",
+    'width': "100%",
+    'lg-height': "96px",
+    // 'sm-height': "150px",
+    'z-index':'10'
+    }}
+    className="bg-gray-50"
 
->
-    <Navbar />
+    >
+    <NavigationBar />
     <div className="flex md:flex items-center py-10 px-6">
         <div className='max-w-md md:max-w-md mx-auto w-full'>
             {/* <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">

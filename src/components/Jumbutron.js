@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from "react"
-import Navbar from "./Navbar";
+import NavigationBar from "./NavigationBar";
 import { ImageContext } from "../container/Home"
 
 const Jumbutron = ({ children }) => {
@@ -23,9 +23,9 @@ const Jumbutron = ({ children }) => {
                     className="bg-gray-50"
                     
                     >
-            <Navbar>
+            <NavigationBar>
               { children }
-            </Navbar>
+            </NavigationBar>
           </div>
         ) : (
           <>
