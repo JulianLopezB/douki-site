@@ -54,7 +54,7 @@ className="bg-gray-50"
                 Manifesto
             </h1>
             <p className='text-gray text-left text-1xl  mb-5'>
-            At our ecommerce website, we believe in the power of technology to enhance the shopping experience, but we also believe in the joy of using one's own creativity to shop for clothes. That's why we have implemented OpenAI's CLIP (Contrastive Language-Image Pre-training) embeddings to power our search functionality. 
+            At our Dokusō, we believe in the power of technology to enhance the shopping experience, but we also believe in the joy of using one's own creativity to shop for clothes. That's why we have implemented <a href="https://openai.com/blog/clip/" className="text-blue-700">OpenAI's CLIP</a> (Contrastive Language-Image Pre-training) embeddings to power our search functionality. 
             </p>
             <p className='text-gray text-left text-1xl  mb-5'>
             With CLIP, finding the perfect piece of clothing is as easy as entering a few keywords and letting your creativity guide you. Our platform matches the text descriptions to the visual features of the images to retrieve the most relevant product pages, so you can find what you're looking for with ease.
@@ -70,11 +70,6 @@ className="bg-gray-50"
             Thank you for choosing to shop with us. We look forward to helping you find the perfect outfit!
             </p>
 
-                
-            <p className='text-gray text-left text-1xl  mb-8'>
-            Developed by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba"> Julian Lopez Baasch
-            </a>
-            </p>
         </div>
     </div>
 </div>
