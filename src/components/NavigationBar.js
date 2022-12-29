@@ -19,26 +19,30 @@ const NavigationBar = ({ children }) => {
               <a href='/home'>Dokusō</a>
             </span>
         </Navbar.Brand>
-        <div class="hidden sm:block mt-2 flex"> { children } </div>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Navbar.Link
-            href="/home"
-            active={true}
-          >
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="/manifesto">
-            Manifesto
-          </Navbar.Link>
-          <Navbar.Link href="/partners">
-            Partners
-          </Navbar.Link>
-          <Navbar.Link href="/contact">
-            Contact
-          </Navbar.Link>
-        </Navbar.Collapse>
-        <div class="sm:hidden mt-2 flex"> { children } </div>
+          <div class="hidden sm:block mt-2 flex"> 
+            { children } 
+          </div>
+          <Navbar.Toggle />
+          <Navbar.Collapse>
+            <Navbar.Link
+              href="/home"
+              active={true}
+            >
+              Home
+            </Navbar.Link>
+            <Navbar.Link href="/manifesto">
+              Manifesto
+            </Navbar.Link>
+            <Navbar.Link href="/partners">
+              Partners
+            </Navbar.Link>
+            <Navbar.Link href="/contact">
+              Contact
+            </Navbar.Link>
+          </Navbar.Collapse>
+          <div class="sm:hidden mt-2 flex"> 
+            { children } 
+          </div>
       </Navbar>
     );
 };

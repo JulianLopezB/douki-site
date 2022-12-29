@@ -916,3 +916,62 @@ align-items: center;
 }
 }
 }
+
+.feature-request {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  }
+  
+  .input-field,
+  .textarea-field {
+  width: 60%;
+  height: 35px;
+  border: 2px solid #0074d9;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  }
+  
+  .textarea-field {
+  height: 150px;
+  resize: none;
+  }
+  
+  .submit-button {
+  background-color: #0074d9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  }
+  
+  .waiting-list-text {
+  margin-top: 30px;
+  }
+  
+  .waiting-list-button {
+  background-color: #0074d9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  }
