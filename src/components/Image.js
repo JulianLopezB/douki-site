@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {} from '../styles.scss'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -7,6 +7,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import IconButton  from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingBag from '@mui/icons-material/ShoppingBag';
+import { signInWithGoogle } from '../services/firebase';
+import firebase from '../services/firebase';
 
 function toTitleCase(str) {
   return str.replace(
@@ -34,6 +36,13 @@ function getImageSrc(brand) {
 
 const Image = ({ data }) => {
   const [active, setActive] = useState(false);
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+  firebase.auth().onAuthStateChanged(user => {
+    setUser(user);
+  })
+  }, [])
+  console.log(user)
 
   return (
       <div class="relative  mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-10">
@@ -53,7 +62,7 @@ const Image = ({ data }) => {
                 <>
                 <IconButton 
                   aria-label="add to favorites"
-                  onClick={() => setActive(!active)}
+                  onClick={user ? () => setActive(!active) : signInWithGoogle}
                   color={active ? "primary" : "default" }
                   >
                 <FavoriteIcon /> 

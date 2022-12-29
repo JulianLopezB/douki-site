@@ -3,8 +3,6 @@ import { ImageContext } from "../container/Home"
 import Image from './Image';
 import * as React from 'react';
 
-
-
 function Images() {
 
   const { response, fetchData, setSearchImage, setSearchValue,setPlaceHolder} = useContext(ImageContext);
