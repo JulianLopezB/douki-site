@@ -80,7 +80,7 @@ const Image = ({ data }) => {
 
               <CardActionArea 
               // href={data.shop_link} target="_blank" rel="noopener noreferrer"
-              onDoubleClick={() => setActive(!active)}
+              onDoubleClick={user ? () => setActive(!active) : signInWithGoogle}
               >
                 <CardMedia
                   component="img"

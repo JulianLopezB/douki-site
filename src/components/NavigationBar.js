@@ -31,9 +31,9 @@ const NavigationBar = ({ children }) => {
               <a href='/home'>Dokusō</a>
             </span>
         </Navbar.Brand>
-          {/* <div class="hidden sm:block mt-2 flex"> 
+          <div class="hidden sm:block mt-2 flex"> 
             { children } 
-          </div> */}
+          </div>
         <div className="flex md:order-2">
           {user ? 
           <>
@@ -92,7 +92,7 @@ const NavigationBar = ({ children }) => {
               Contact
             </Navbar.Link>
           </Navbar.Collapse>
-          <div class="sm:hidden mt-2 flex"> 
+          <div class="sm:hidden  mt-2 flex"> 
             { children } 
           </div>
       </Navbar>
