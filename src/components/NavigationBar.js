@@ -67,7 +67,7 @@ const NavigationBar = ({ children }) => {
               Sign out
             </Dropdown.Item>
           </Dropdown>
-          <Navbar.Toggle />
+          {/* <Navbar.Toggle /> */}
           </> : 
           <Button type="button"
           className="bg-black flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none text-white" 
