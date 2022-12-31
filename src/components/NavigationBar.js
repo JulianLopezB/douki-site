@@ -20,6 +20,7 @@ const NavigationBar = ({ children }) => {
       <Navbar
         fluid={true}
         rounded={true}
+        class="background-color:transparent"
       >
         <Navbar.Brand href="/home">
           {/* <img
@@ -32,7 +33,9 @@ const NavigationBar = ({ children }) => {
             </span>
         </Navbar.Brand>
           <div class="hidden sm:block mt-2 flex"> 
+            <div>
             { children } 
+            </div>
           </div>
         <div className="flex md:order-2">
           {user ? 
@@ -69,8 +72,8 @@ const NavigationBar = ({ children }) => {
           <Button type="button"
           className="bg-black flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none text-white" 
           onClick={signInWithGoogle}>
-            <i className="fab fa-google">
-            </i>
+            {/* <i className="fab fa-google">
+            </i> */}
             Sign in
           </Button>}
         </div>
@@ -79,16 +82,26 @@ const NavigationBar = ({ children }) => {
             <Navbar.Link
               href="/home"
               active={true}
+              class="text-white"
             >
               Home
             </Navbar.Link>
-            <Navbar.Link href="/manifesto">
+            <Navbar.Link 
+              href="/manifesto" 
+              class="text-white"
+            >
               Manifesto
             </Navbar.Link>
-            <Navbar.Link href="/partners">
+            <Navbar.Link 
+              href="/partners"
+              class="text-white"
+            >
               Partners
             </Navbar.Link>
-            <Navbar.Link href="/contact">
+            <Navbar.Link 
+              href="/contact"
+              class="text-white"
+            >
               Contact
             </Navbar.Link>
           </Navbar.Collapse>
