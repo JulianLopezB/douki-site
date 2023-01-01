@@ -23,7 +23,7 @@ const Jumbutron = ({ children }) => {
                     className="bg-gray-50"
                     
                     >
-        {/* <div className="py-2 px-6"> */}
+          {/* <div className="py-2 px-6"> */}
         {/* <div className='max-w-md md:max-w-md mx-auto w-full'> */}
             <NavigationBar>
               { children }
@@ -40,11 +40,11 @@ const Jumbutron = ({ children }) => {
         {/* <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
           About
           </h1> */}
-        <p className='text-white text-left text-1xl  mb-5 py-2'>
+        <p className='text-gray text-left text-1xl  mb-5 py-2'>
           Do you love fashion? Discover amazing outfits with Dokusō, 
           a new AI-driven experience to creatively shop for clothes.
         </p>
-        <p className='text-white text-left text-1xl  mb-5'>
+        <p className='text-gray text-left text-1xl  mb-5'>
           We want to give you the most natural and intuitive shopping experience so that you can find great outfits in your favorite styles.
         </p>
         {/* <p className='text-gray text-left text-2xl  mb-5'>
@@ -52,7 +52,7 @@ const Jumbutron = ({ children }) => {
           </p> */}
         {/* <p className='text-gray text-left text-2xl  mb-5'>
           Images are sourced from Zara, Mango, H&M and Urban Outfitters latest collections</p> */}
-        <p className='text-white text-left text-1xl  mb-8'>
+        <p className='text-gray text-left text-1xl  mb-8'>
           Created by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba">Julian Lopez Baasch</a>
           </p>
         {/* <h1 class="text-gray text-left text-3xl font-bold mb-3 py-0">
