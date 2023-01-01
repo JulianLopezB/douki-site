@@ -20,7 +20,6 @@ const NavigationBar = ({ children }) => {
       <Navbar
         fluid={true}
         rounded={true}
-        class="background-color:transparent"
       >
         <Navbar.Brand href="/home">
           {/* <img
@@ -67,7 +66,7 @@ const NavigationBar = ({ children }) => {
               Sign out
             </Dropdown.Item>
           </Dropdown>
-          {/* <Navbar.Toggle /> */}
+          <Navbar.Toggle />
           </> : 
           <Button type="button"
           className="bg-black flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none text-white" 
@@ -82,26 +81,16 @@ const NavigationBar = ({ children }) => {
             <Navbar.Link
               href="/home"
               active={true}
-              class="text-white"
             >
               Home
             </Navbar.Link>
-            <Navbar.Link 
-              href="/manifesto" 
-              class="text-white"
-            >
+            <Navbar.Link href="/manifesto">
               Manifesto
             </Navbar.Link>
-            <Navbar.Link 
-              href="/partners"
-              class="text-white"
-            >
+            <Navbar.Link href="/partners">
               Partners
             </Navbar.Link>
-            <Navbar.Link 
-              href="/contact"
-              class="text-white"
-            >
+            <Navbar.Link href="/contact">
               Contact
             </Navbar.Link>
           </Navbar.Collapse>

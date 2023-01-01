@@ -11,19 +11,19 @@ const Jumbutron = ({ children }) => {
       <>
         {(typeof response !== 'undefined' && response.length > 0) ? (
           // <div class="py-2"></div>
-          // <div 
-          //   style={{
-          //           'top': "0px",
-          //           'position': "sticky",
-          //           'width': "100%",
-          //           'lg-height': "96px",
-          //           // 'sm-height': "150px",
-          //           'z-index':'10'
-          //           }}
-          //           className="bg-gray-50"
+          <div 
+            style={{
+                    'top': "0px",
+                    'position': "sticky",
+                    'width': "100%",
+                    'lg-height': "96px",
+                    // 'sm-height': "150px",
+                    'z-index':'10'
+                    }}
+                    className="bg-gray-50"
                     
-          //           >
-          <div className="py-2 px-6">
+                    >
+        {/* <div className="py-2 px-6"> */}
         {/* <div className='max-w-md md:max-w-md mx-auto w-full'> */}
             <NavigationBar>
               { children }

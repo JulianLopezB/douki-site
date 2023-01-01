@@ -256,15 +256,16 @@ max-width: 100%;
 *{ box-sizing: border-box; }
 
 body {
-// background-color: var(--body-bg-color);
-// font-family: var(--body-font);
-// color: var(--body-color);
+background-color: var(--body-bg-color);
+font-family: var(--body-font);
+color: var(--body-color);
 // overflow: hidden;
-position: relative;
-width: 100vw;
-height: 100vh;
-background: linear-gradient(to bottom right, #274B74 0%, #8233C5 50%, #E963FD 100%);
-font-family: "Montserrat", sans-serif;
+// position: relative;
+// width: 100vw;
+// height: 100vh;
+// background: linear-gradient(to bottom right, #274B74 0%, #8233C5 50%, #E963FD 100%);
+// font-family: "Montserrat", sans-serif;
+// overflow: hidden;
 
 
 .container{
@@ -286,7 +287,8 @@ font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;
     border: none;
     border-radius: 5px;
-  //   background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
+    // background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
+    background: var(--body-bg-color);
     transition: width 0.4s ease;
     outline: none;
     
