@@ -1,25 +1,9 @@
 import React from 'react'
-// import { useContext } from "react"
-import NavigationBar from "./NavigationBar";
+
 
 const ManifestoComp = ({ children }) => {
 
     return (
-    <div 
-    style={{
-    'top': "0px",
-    'position': "sticky",
-    'width': "100%",
-    'lg-height': "96px",
-    // 'sm-height': "150px",
-    'z-index':'10'
-    }}
-    className="bg-gray-50"
-
-    >
-    <NavigationBar>
-        { children }
-    </NavigationBar>
     <div className="flex md:flex items-center py-10 px-6">
         <div className='max-w-md md:max-w-md mx-auto w-full'>
             {/* <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
@@ -49,7 +33,7 @@ const ManifestoComp = ({ children }) => {
                 Developed by <a class="footer" href="https://ar.linkedin.com/in/julianlopezba"> Julian Lopez Baasch
                 </a>
             </p> */}
-
+            
             <h1 className="text-gray text-left text-2xl font-bold mb-3 py-0">
                 Manifesto
             </h1>
@@ -72,7 +56,6 @@ const ManifestoComp = ({ children }) => {
 
         </div>
     </div>
-</div>
 
   )
 }

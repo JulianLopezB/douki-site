@@ -25,6 +25,7 @@ const Jumbutron = ({ children }) => {
                     >
           {/* <div className="py-2 px-6"> */}
         {/* <div className='max-w-md md:max-w-md mx-auto w-full'> */}
+
             <NavigationBar>
               { children }
             </NavigationBar>
@@ -41,8 +42,9 @@ const Jumbutron = ({ children }) => {
           About
           </h1> */}
         <p className='text-gray text-left text-1xl  mb-5 py-2'>
-          Do you love fashion? Discover amazing outfits with Dokusō, 
-          a new AI-driven experience to creatively shop for clothes.
+          {/* Do you love fashion? Discover amazing outfits with Dokusō, 
+          a new AI-driven experience to creatively shop for clothes. */}
+          Looking for the perfect fashion items from top brands in the industry? Look no further than Dokuso. Our search engine, powered by OpenAI's CLIP, allows you to find exactly what you're looking for with just a few clicks. Simply enter a description of what you're looking for and let our AI do the rest. CLIP's advanced image recognition technology makes it easy to find the perfect fashion items, without the hassle of sifting through pages of search results. Start shopping now and see the power of our AI in action!
         </p>
         <p className='text-gray text-left text-1xl  mb-5'>
           We want to give you the most natural and intuitive shopping experience so that you can find great outfits in your favorite styles.

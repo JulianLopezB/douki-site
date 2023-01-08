@@ -15,7 +15,7 @@ const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const [placeHolder, setPlaceHolder] = useState("");
   const { response, isLoading, error, fetchData } = useAxios(`null`);
-  console.log('response', response);
+  // console.log('response', response);
   // const { response, isLoading, error, fetchData } = useAxios(`search?query=Wes Anderson`);
   // const [user, setUser] = useState(null);
   // useEffect(() => {
@@ -51,8 +51,8 @@ const Home = () => {
     } */}
       <ImageContext.Provider value={value}>
         <Jumbutron>
-        <SearchField />
-      < /Jumbutron>
+          <SearchField />
+        < /Jumbutron>
         <Images />
       </ImageContext.Provider> 
   </>
