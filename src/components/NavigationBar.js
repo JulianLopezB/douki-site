@@ -1,104 +1,42 @@
-import {React} from 'react';
-import {Navbar, Dropdown, Avatar, Button} from 'flowbite-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import {useState, useEffect } from "react";
-import { signInWithGoogle } from '../services/firebase';
+const NavigationBar = ({children}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-
-import firebase from '../services/firebase';
-
-const NavigationBar = ({ children }) => {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-  firebase.auth().onAuthStateChanged(user => {
-    setUser(user);
-  })
-  }, [])
-  console.log(user)
-
-    return (
-      <Navbar
-        fluid={true}
-        rounded={true}
-      >
-        <Navbar.Brand href="/home">
-          {/* <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="mr-3 h-6 sm:h-9"
-            alt="Flowbite Logo"
-          /> */}
-          <span class="box-decoration-clone text-white text-2xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-2">
-              <a href='/home'>Dokusō</a>
-            </span>
-        </Navbar.Brand>
-          <div class="hidden sm:block mt-2 flex"> 
-            <div>
-            { children } 
-            </div>
-          </div>
-        <div className="flex md:order-2">
-          {user ? 
-          <>
-          <Dropdown
-            arrowIcon={false}
-            inline={true}
-            label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded={true}/>}
-          >
-            <Dropdown.Header>
-              <span className="block text-sm">
-                Bonnie Green
-              </span>
-              <span className="block truncate text-sm font-medium">
-                name@flowbite.com
-              </span>
-            </Dropdown.Header>
-            <Dropdown.Item>
-              Dashboard
-            </Dropdown.Item>
-            <Dropdown.Item>
-              Settings
-            </Dropdown.Item>
-            <Dropdown.Item>
-              Earnings
-            </Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item>
-              Sign out
-            </Dropdown.Item>
-          </Dropdown>
-          <Navbar.Toggle />
-          </> : 
-          <Button type="button"
-          className="bg-black flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none text-white" 
-          onClick={signInWithGoogle}>
-            {/* <i className="fab fa-google">
-            </i> */}
-            Sign in
-          </Button>}
+  return (
+    <nav className="flex items-center justify-between flex-wrap bg-gray-100 p-6">
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <Link to="/">
+          <span className="font-semibold text-xl text-gray-800 tracking-tight">Dokusō</span>
+        </Link>
+      </div>
+      <div className="block lg:hidden">
+        <button className="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400 hover:text-gray-300 hover:border-white" onClick={toggleMenu}>
+          <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
+      </div>
+      <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
+      {children}
+       <div className="text-sm lg:flex-grow">
+           
+          <Link to="/Home" className="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-black mr-4">
+            Home
+          </Link>
+          <Link to="/manifesto" className="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-black mr-4">
+            Manifesto
+          </Link>
+          <Link to="/contact" className="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-black mr-4">
+            Contact
+          </Link>
         </div>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
-            <Navbar.Link
-              href="/home"
-              active={true}
-            >
-              Home
-            </Navbar.Link>
-            <Navbar.Link href="/manifesto">
-              Manifesto
-            </Navbar.Link>
-            <Navbar.Link href="/partners">
-              Partners
-            </Navbar.Link>
-            <Navbar.Link href="/contact">
-              Contact
-            </Navbar.Link>
-          </Navbar.Collapse>
-          <div class="sm:hidden  mt-2 flex"> 
-            { children } 
-          </div>
-      </Navbar>
-    );
+        <div>
+          <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-500 hover:bg-white mt-4 lg:mt-0 font-sans font-bold text-2xl text-white bg-purple-600 hover:bg-purple-500 rounded-full">Sign Up</Link>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default NavigationBar;
