@@ -83,7 +83,7 @@ const SearchField = () => {
   type="text"
   // placeholder={placeHolder || "Find your perfect outfit"}
   placeholder="&#xF002; Unleash your creativity..." 
-  style={{'font-family':"Arial, FontAwesome", 'align-items': 'center'}}
+  style={{'font-family':"Arial, FontAwesome", 'align-items': 'center', 'color': 'gray-800'}}
   value={searchValue}
   onChange={handleInputChange}
   onKeyDown={handleEnterSearch}
