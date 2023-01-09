@@ -27,7 +27,7 @@ function Images() {
       {(typeof response !== 'undefined' && response.length > 0) ? (
         <div className="items-center px-1 py-2">
           <div className="md:shrink-0 items-center">
-            <div class="columns-2 sm:columns-2 md:columns-3 lg:columns-4 d-flex gap-2">
+            <div class="columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 d-flex gap-1">
               {uniqueArray.map((data, key) => (<Image data={data} key={key}/>))}
             </div>
           </div>
