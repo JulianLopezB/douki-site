@@ -21,16 +21,16 @@ const NavigationBar = ({children}) => {
       {/* {children} */}
       <div className="text-sm lg:flex-grow">
 <Link
-         to="/products"
-         className="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600 mr-4"
-       >
-Products
+        to="/manifesto"
+        className="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600 mr-4"
+    >
+About
 </Link>
 <Link
-         to="/manifesto"
+         to="/Brands"
          className="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600 mr-4"
        >
-Manifesto
+Brands
 </Link>
 <Link
          to="/contact"
@@ -51,7 +51,3 @@ Contact
 };
 
 export default NavigationBar;
-
-{/* <div>
-<Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-500 hover:bg-white mt-4 lg:mt-0 font-sans font-bold text-2xl text-white bg-purple-600 hover:bg-purple-500 rounded-full">Sign Up</Link>
-</div> */}
