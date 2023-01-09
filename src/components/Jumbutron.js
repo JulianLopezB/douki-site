@@ -1,7 +1,8 @@
 import React from 'react'
 import { useContext } from "react"
 import NavigationBar from "./NavigationBar";
-import { ImageContext } from "../container/Home"
+import { ImageContext } from "../container/Home";
+// import { Link } fro/m 'react-router-dom';
 
 const Jumbutron = ({ children }) => {
   const { response  } = useContext(ImageContext);
@@ -35,13 +36,18 @@ const Jumbutron = ({ children }) => {
           <>
         <div className="flex md:flex items-center py-10 px-6">
         <div className='max-w-md md:max-w-md mx-auto w-full'>
-          <span class="box-decoration-clone text-white text-3xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
+          <span class="box-decoration-clone text-white text-4xl bg-gradient-to-r from-indigo-600 to-pink-500 leading-[3.5rem] px-2 mb-10">
           <a href='https://dokuso.app/'>Dokusō</a>
           </span>
+          {/* <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <Link to="/">
+          <span className="font-semibold text-4xl text-gray-800 tracking-tight">Dokusō</span>
+        </Link>
+      </div> */}
         {/* <h1 class="text-gray text-left text-2xl font-bold mb-3 py-0">
           About
           </h1> */}
-        <p className='text-gray text-left text-1xl  mb-5 py-2'>
+        <p className='text-gray text-left text-1xl  mb-5 py-3'>
           {/* Do you love fashion? Discover amazing outfits with Dokusō, 
           a new AI-driven experience to creatively shop for clothes. */}
           Looking for the perfect fashion items from top brands in the industry? Look no further than Dokuso. Our search engine, powered by OpenAI's CLIP, allows you to find exactly what you're looking for with just a few clicks. Simply enter a description of what you're looking for and let our AI do the rest. CLIP's advanced image recognition technology makes it easy to find the perfect fashion items, without the hassle of sifting through pages of search results. Start shopping now and see the power of our AI in action!

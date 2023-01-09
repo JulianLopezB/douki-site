@@ -65,17 +65,18 @@ function Image({ data }) {
 return (
   <div className="relative mb-1">
 <Card className={classes.card}>
-<CardActionArea href={shop_link} target="_blank" rel="noopener noreferrer">
+<CardActionArea>
 <CardMedia
                   component="img"
                   height="194"
                   image={img_urls}
                   alt={description}
+                  href={shop_link} target="_blank" rel="noopener noreferrer"
                 />
 <IconButton 
         aria-label="add to favorites"
         onClick={user ? () => setActive(!active) : signInWithGoogle}
-        color={active ? "red" : "default" }
+        color={active ? "primary" : "default" }
         sx={{
           position: "absolute",
           right: "-1px",
