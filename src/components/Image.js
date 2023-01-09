@@ -13,6 +13,21 @@ import { useState, useEffect } from "react"
 import firebase from '../services/firebase';
 import { signInWithGoogle } from '../services/firebase';
 
+
+function getImageSrc(brand) {
+  let src;
+  if (brand === 'ZARA') {
+    src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/320px-Zara_Logo.svg.png";
+  } else if (brand === 'MANGO') {
+    src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Logo_of_Mango_%28new%29.svg/320px-Logo_of_Mango_%28new%29.svg.png";
+  } else if (brand === 'UO') {
+    src = "https://seeklogo.com/images/U/urban-outfitters-logo-E9B99ABE57-seeklogo.com.png";
+  } else {
+    src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/320px-H%26M-Logo.svg.png";
+  }
+  return src
+}
+
 const useStyles = makeStyles((theme) => ({
 card: {
 maxWidth: 345,
@@ -58,18 +73,40 @@ return (
                   alt={description}
                 />
 <IconButton 
-                  aria-label="add to favorites"
-                  onClick={user ? () => setActive(!active) : signInWithGoogle}
-                  color={active ? "red" : "default" }
-                  sx={{
-                    position: "absolute",
-                    right: "-1px",
-                    top: "-1px",
-                    color: "gray",
-                    fontSize: 22
-                  }}
-                  >
+        aria-label="add to favorites"
+        onClick={user ? () => setActive(!active) : signInWithGoogle}
+        color={active ? "red" : "default" }
+        sx={{
+          position: "absolute",
+          right: "-1px",
+          top: "-1px",
+          color: "gray",
+          fontSize: 22
+        }}
+        >
     <FavoriteIcon /> 
+</IconButton>
+<IconButton 
+        aria-label="add to favorites"
+        onClick={user ? () => setActive(!active) : signInWithGoogle}
+        color={active ? "red" : "default" }
+        sx={{
+          position: "absolute",
+          left: "2px",
+          top: "2px",
+
+        }}
+        >
+        <div className="">
+          <img 
+          src={getImageSrc(data.brand.toUpperCase())}  
+          alt={data.brand}
+          // height="60"
+          width="40" 
+          frameborder="0" 
+          scrolling="no"
+          className="img-fluid"/>
+        </div>
 </IconButton>
 <CardContent>
 <Typography gutterBottom 
